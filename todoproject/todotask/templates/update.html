@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div  class="card" xmlns="http://www.w3.org/1999/html">
+    <div class="card-header">
+        <div class="card-title">
+           <center> <h5 style="color:red">Task Update</h5></center>
+            <div class="card-body">
+                <center>
+<form method="POST">
+    {% csrf_token %}<br>
+
+    {{form.as_p}}<br>
+      <input type="submit" class="btn btn-primary">
+</form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</center>
+{% endblock %}
